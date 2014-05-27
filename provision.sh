@@ -27,7 +27,7 @@ auth    required    pam_boapnet.so")
 
     ## Install
     sudo cp /vagrant/PAM/libpam_boapnet.so /lib/security/pam_boapnet.so
-    sudo echo "$CONF" > /etc/pam.d/boapnet
+    sudo bash -c "echo \"$CONF\" > /etc/pam.d/boapnet"
     #sudo echo "auth    required    pam_boapnet.so" >> /etc/pam.d/common-auth
 }
 
